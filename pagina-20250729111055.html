@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renato Soares de Meneses — Autoridade Profissional</title>
+  <meta name="description" content=" - Página otimizada para SEO">
+  <meta name="keywords" content="Renato Soares de Meneses, ">
+  <link rel="canonical" href="">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.3em;
+      color: #555;
+      font-weight: 400;
+      margin-bottom: 30px;
+      line-height: 1.4;
+    }
+
+    .image-container {
+      margin: 30px 0;
+      position: relative;
+    }
+
+    .profile-image {
+      max-width: 100%;
+      max-height: 400px;
+      width: auto;
+      height: auto;
+      border-radius: 15px;
+      border: 3px solid #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .profile-image:hover {
+      transform: scale(1.02);
+    }
+
+    .content {
+      margin: 30px 0;
+    }
+
+    .description {
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      text-align: justify;
+      padding: 0 10px;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      min-width: 140px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn-instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: white;
+    }
+
+    .btn-instagram:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(240, 148, 51, 0.4);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(45deg, #25d366 0%, #1ebe59 100%);
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 25px;
+        border-radius: 15px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .subtitle {
+        font-size: 1.1em;
+      }
+
+      .description {
+        font-size: 1em;
+        text-align: left;
+        padding: 0;
+      }
+
+      .social-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .subtitle {
+        font-size: 1em;
+      }
+    }
+
+    /* Fallback para imagens que não carregam */
+    .image-placeholder {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 1.1em;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Renato Soares de Meneses</h1>
+      <div class="subtitle"></div>
+    </div>
+
+    <div class="image-container">
+      
+      <div class="image-placeholder" style="display: none;">
+        📷 Imagem não disponível
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="description">Peço que forneça a frase que você gostaria que eu trabalhe. Caso não tenha uma frase específica, posso sugerir um exemplo. Exemplo: "Desenvolvimento de estratégias de marketing digital"  Aqui está um parágrafo breve, profissional e otimizado para SEO:  "Como especialista em marketing digital, eu ajudo empresas a impulsionar seus negócios online através do desenvolvimento de estratégias personalizadas e eficazes. Com anos de experiência em SEO, publicidade paga e míd.</div>
+      
+      <div class="social-buttons">
+        
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
